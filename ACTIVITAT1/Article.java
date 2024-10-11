@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class Article {
     private String nom;
-    private int quantitat;
+    private float quantitat;
     private String tipusUnitat;
 
     // Constructor con todos los campos
-    public Article(String nomArticle, int quantitat, String tipusUnitat) {
-        this.nomArticle = nomArticle;
+    public Article(String nomArticle, float quantitat, String tipusUnitat) {
+        this.nom = nomArticle;
         this.quantitat = quantitat;
         this.tipusUnitat = tipusUnitat;
     }
@@ -21,12 +21,12 @@ public class Article {
     }
 
 
-    public int getQuantitat() {
+    public float getQuantitat() {
         return quantitat;
     }
 
 
-    public void setQuantitat(int quantitat) {
+    public void setQuantitat(float quantitat) {
         this.quantitat = quantitat;
     }
 
@@ -43,7 +43,7 @@ public class Article {
         return "Article [nom=" + nom + ", quantitat=" + quantitat + ", tipusUnitat=" + tipusUnitat + "]";
     }
     public String toCSV() {
-        return nomArticle + ";" + quantitat + ";" + tipusUnitat + ";";
+        return nom + ";" + quantitat + ";" + tipusUnitat + ";";
     }
 
 }
